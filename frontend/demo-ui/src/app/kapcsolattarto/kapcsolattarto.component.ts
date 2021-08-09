@@ -17,10 +17,10 @@ export class KapcsolattartoComponent implements OnInit {
       .subscribe(kapcsolattartok => this.kapcsolattartok = kapcsolattartok);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.kapcsolattartoService.addKapcsolattarto({ name } as Kapcsolattarto)
+  add(firstName: string): void {
+    firstName = firstName.trim();
+    if (!firstName) { return; }
+    this.kapcsolattartoService.addKapcsolattarto({ firstName } as Kapcsolattarto)
       .subscribe(kapcsolattarto => {
         this.kapcsolattartok.push(kapcsolattarto);
       });

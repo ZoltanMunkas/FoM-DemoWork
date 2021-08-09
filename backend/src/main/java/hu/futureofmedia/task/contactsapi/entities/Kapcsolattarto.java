@@ -1,6 +1,6 @@
 package hu.futureofmedia.task.contactsapi.entities;
 
-import hu.futureofmedia.task.contactsapi.StatusEnum;
+import hu.futureofmedia.task.contactsapi.enums.StatusEnum;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
