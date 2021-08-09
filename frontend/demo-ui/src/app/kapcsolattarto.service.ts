@@ -44,6 +44,22 @@ export class KapcsolattartoService {
     );
   }
 
+  addKapcsolattarto(kapcsolattarto: Kapcsolattarto): Observable<Kapcsolattarto> {
+    return this.http.post<Kapcsolattarto>(this.kapcsolattartoUrl, kapcsolattarto, this.httpOptions).pipe(
+      tap((newK: Kapcsolattarto) => this.log(`added ${newK.id}`)),
+      catchError(this.handleError<Kapcsolattarto>('addKapcsolattarto'))
+    );
+  }
+
+  deleteKapcsolattarto(id: number): Observable<Kapcsolattarto> {
+    const url = `${this.kapcsolattartoUrl}/${id}`;
+  
+    return this.http.delete<Kapcsolattarto>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted ${id}`)),
+      catchError(this.handleError<Kapcsolattarto>('deleteKapcsolattarto'))
+    );
+  }
+
   private log(message: string) {
     this.messageService.add(`KapcsolattartoService: ${message}`);
   }
