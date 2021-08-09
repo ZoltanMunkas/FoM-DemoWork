@@ -33,4 +33,11 @@ export class KapcsolattartoDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    if (this.kapcsolattarto) {
+      this.kapcsolattartoService.updateKapcsolattarto(this.kapcsolattarto)
+        .subscribe(() => this.goBack());
+    }
+  }
+
 }
