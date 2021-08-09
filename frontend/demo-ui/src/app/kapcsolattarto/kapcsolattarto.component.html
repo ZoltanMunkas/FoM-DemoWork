@@ -1,0 +1,21 @@
+<h2>Kapcsolattartó list</h2>
+
+<div>
+  <label for="new-kapcsolattarto">Kapcsolattartó name: </label>
+  <input id="new-kapcsolattarto" #kapcsolattartoName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(kapcsolattartoName.value); kapcsolattartoName.value=''">
+    Hozzáadás
+  </button>
+</div>
+
+  <ul class="kapcsolattartok">
+    <li *ngFor="let current of kapcsolattartok">
+      <a routerLink="/detail/{{current.id}}">
+        <span class="badge">{{current.id}}</span> {{current.name}}
+      </a>
+      <button class="delete" title="delete kapcsolattarto"
+  (click)="delete(current)">x</button>
+    </li>
+</ul>

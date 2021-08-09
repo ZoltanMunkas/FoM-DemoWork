@@ -1,0 +1,13 @@
+<div *ngIf="kapcsolattarto">
+
+    <h2>{{kapcsolattarto.name}} Details</h2>
+    <div><span>id: </span>{{kapcsolattarto.id}}</div>
+    <div>
+      <label for="kapcsolattarto-name">Kapcsolattartó name: </label>
+      <input id="kapcsolattarto-name" [(ngModel)]="kapcsolattarto.name" placeholder="name">
+    </div>
+  
+  </div>
+
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
