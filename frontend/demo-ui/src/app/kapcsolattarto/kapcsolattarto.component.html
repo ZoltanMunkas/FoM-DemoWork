@@ -1,11 +1,9 @@
 <h2>Kapcsolattartó list</h2>
 
   <ul class="kapcsolattartok">
-    <li *ngFor="let current of kapcsolattartok" 
-    (click)="onSelect(current)" 
-    [class.selected]="current === selectedKapcsolattarto">
-    <span class="badge">{{current.id}}</span> {{current.name}}
-  </li>
+    <li *ngFor="let current of kapcsolattartok">
+      <a routerLink="/detail/{{current.id}}">
+        <span class="badge">{{current.id}}</span> {{current.name}}
+      </a>
+    </li>
 </ul>
-
-<app-kapcsolattarto-detail [kapcsolattarto]="selectedKapcsolattarto"></app-kapcsolattarto-detail>

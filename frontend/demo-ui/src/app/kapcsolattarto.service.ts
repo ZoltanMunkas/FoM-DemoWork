@@ -17,4 +17,10 @@ export class KapcsolattartoService {
     return kapcsolattartok;
   }
 
+  getKapcsolattarto(id: number): Observable<Kapcsolattarto> {
+    const kapcsolattartok = KAPCSOLATTARTOK.find(it => it.id === id)!;
+    this.messageService.add('Kapcsolattartók lekérve');
+    return of(kapcsolattartok);
+  }
+
 }

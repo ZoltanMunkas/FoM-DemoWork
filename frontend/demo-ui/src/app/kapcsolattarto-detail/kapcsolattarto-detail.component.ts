@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Kapcsolattarto } from '../kapcsolattarto';
-
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { KapcsolattartoService } from '../kapcsolattarto.service';
 
 @Component({
   selector: 'app-kapcsolattarto-detail',
@@ -11,9 +13,24 @@ export class KapcsolattartoDetailComponent implements OnInit {
 
   @Input() kapcsolattarto?: Kapcsolattarto;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private kapcsolattartoService: KapcsolattartoService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.getKapcsolattarto();
+  }
+
+  getKapcsolattarto(): void{
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.kapcsolattartoService.getKapcsolattarto(id)
+      .subscribe(kapcsolattarto => this.kapcsolattarto = kapcsolattarto);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

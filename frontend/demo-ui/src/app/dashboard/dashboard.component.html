@@ -1,0 +1,7 @@
+<h2>Kapcsolattartók</h2>
+<div class="kapcsolattarto-menu">
+  <a *ngFor="let current of kapcsolattartok"
+    routerLink="/detail/{{current.id}}">
+    {{current.name}}
+  </a>
+</div>

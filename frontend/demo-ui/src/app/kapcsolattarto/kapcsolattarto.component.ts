@@ -12,13 +12,6 @@ export class KapcsolattartoComponent implements OnInit {
 
   kapcsolattartok: Kapcsolattarto[] = [];
 
-  selectedKapcsolattarto?: Kapcsolattarto;
-  
-  onSelect(kapcsolattarto: Kapcsolattarto): void {
-    this.selectedKapcsolattarto = kapcsolattarto;
-    this.messageService.add(`Kapcsolattarto ${kapcsolattarto.id} kiválasztva`);
-  }
-
   getKapcsolattartok(): void {
     this.kapcsolattartoService.getKapcsolattartok()
       .subscribe(kapcsolattartok => this.kapcsolattartok = kapcsolattartok);
