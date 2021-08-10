@@ -16,4 +16,10 @@ public class Company {
     public String getName() {
         return name;
     }
+
+    public Company(){};
+    public Company(Long id, String name){
+        this.id = id;
+        this.name = name;
+    }
 }
