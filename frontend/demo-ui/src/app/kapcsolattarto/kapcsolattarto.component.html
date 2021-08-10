@@ -13,7 +13,7 @@
   <ul class="kapcsolattartok">
     <li *ngFor="let current of kapcsolattartok">
       <a routerLink="/detail/{{current.id}}">
-        <span class="badge">{{current.id}}</span> {{current.firstName}}
+        <span class="badge">{{current.id}}</span> {{current.firstName}}  {{current.lastName}}
       </a>
       <button class="delete" title="delete kapcsolattarto"
   (click)="delete(current)">x</button>

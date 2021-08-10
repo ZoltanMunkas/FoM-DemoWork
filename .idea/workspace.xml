@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62900b6a-dd96-49e0-ad81-8c139bce0802" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/controllers/CompanyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/controllers/KapcsolattartoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/StatusEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/enums/StatusEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/entities/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/entities/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/entities/Kapcsolattarto.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/entities/Kapcsolattarto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/dummy-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/dummy-data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/repositories/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/repositories/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/repositories/KapcsolattartoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/hu/futureofmedia/task/contactsapi/repositories/KapcsolattartoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/dashboard/dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto-detail/kapcsolattarto-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto-detail/kapcsolattarto-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto/kapcsolattarto.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto/kapcsolattarto.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto/kapcsolattarto.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/demo-ui/src/app/kapcsolattarto/kapcsolattarto.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +32,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="contacts-api" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -39,9 +47,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -99,5 +107,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="kapcsolattartoRepository" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -1,14 +1,12 @@
 package hu.futureofmedia.task.contactsapi.entities;
 
 import hu.futureofmedia.task.contactsapi.enums.StatusEnum;
-import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
-@Where(clause = "status = 1")
 public class Kapcsolattarto {
 
     @Id
@@ -49,7 +47,8 @@ public class Kapcsolattarto {
     @Column(name = "status", nullable = false)
     private StatusEnum status = StatusEnum.ACTIVE;
 
-    public Kapcsolattarto(String firstName, String lastName, String email, String phone, Company company, String comment, StatusEnum status, LocalDateTime creationTime) {
+    public Kapcsolattarto(Long id, String firstName, String lastName, String email, String phone, Company company, String comment, StatusEnum status, LocalDateTime creationTime) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
