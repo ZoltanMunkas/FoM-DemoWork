@@ -15,7 +15,7 @@ create table kapcsolattarto
     company_id      bigint          not null,
     comment         varchar(1000),
     status          smallint        not null,
-    creation_time   timestamp       not null,
+    creation_time   timestamp,
     modified_time   timestamp,
     constraint pk_company primary key (id),
     constraint fk_kapcsolattarto_company foreign key(company_id)

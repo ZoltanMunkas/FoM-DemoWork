@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 @Table(name = "kapcsolattartok")
 @NoArgsConstructor
 @AllArgsConstructor
+@Where(clause = "status = 0")
 public class Kapcsolattarto {
 
     @Id
@@ -45,7 +47,6 @@ public class Kapcsolattarto {
     @Column(name = "comment")
     private String comment;
 
-    @NotNull
     @Column(name = "creation_time")
     private LocalDateTime creationTime;
 

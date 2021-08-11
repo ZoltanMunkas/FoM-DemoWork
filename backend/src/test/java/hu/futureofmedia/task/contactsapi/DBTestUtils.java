@@ -22,6 +22,19 @@ public class DBTestUtils {
             .phone("+36001234123")
             .comment("nocomment")
             .status(StatusEnum.ACTIVE)
-            .creationTime(LocalDateTime.MIN)
+            .creationTime(LocalDateTime.of(2020, 01, 01, 01, 01))
+            .build();
+
+
+    public static Kapcsolattarto TEST_INACTIVE_KAPCSOLATTARTO = Kapcsolattarto.builder()
+            .id(2L)
+            .firstName("Dummy")
+            .lastName("User")
+            .company(TEST_COMPANY)
+            .email("dummy@testcompany.com")
+            .phone("+36001234123")
+            .comment("nocomment")
+            .status(StatusEnum.ARCHIVED)
+            .creationTime(LocalDateTime.of(2020, 01, 01, 01, 01))
             .build();
 }

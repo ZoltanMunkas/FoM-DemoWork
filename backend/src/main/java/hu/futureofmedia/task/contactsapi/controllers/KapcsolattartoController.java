@@ -38,12 +38,14 @@ public class KapcsolattartoController {
 
     @PutMapping("/kapcsolattartok")
     public Kapcsolattarto saveKapcsolattartok(@RequestBody Kapcsolattarto kapcsolattarto){
+        kapcsolattarto.setModifiedTime(LocalDateTime.now());
         kapcsolattartoRepository.save(kapcsolattarto);
         return kapcsolattarto;
     }
 
     @PostMapping("/kapcsolattartok")
     public Kapcsolattarto addKapcsolattarto(@RequestBody Kapcsolattarto kapcsolattarto) {
+        kapcsolattarto.setCreationTime(LocalDateTime.now());
         kapcsolattartoRepository.save(kapcsolattarto);
         return kapcsolattarto;
     }
@@ -52,7 +54,7 @@ public class KapcsolattartoController {
     public void deleteKapcsolattarto(@PathVariable long id){
         if(kapcsolattartoRepository.findById(id).isPresent()){
             Kapcsolattarto deleted = kapcsolattartoRepository.findById(id).get();
-            //deleted.setStatus(StatusEnum.ARCHIVED);
+            deleted.setStatus(StatusEnum.ARCHIVED);
             kapcsolattartoRepository.save(deleted);
         }
     }
