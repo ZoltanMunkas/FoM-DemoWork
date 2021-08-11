@@ -1,12 +1,23 @@
 package hu.futureofmedia.task.contactsapi.entities;
 
 import hu.futureofmedia.task.contactsapi.enums.StatusEnum;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
+@Data
 @Entity
+@Builder
+@Table(name = "kapcsolattartok")
+@NoArgsConstructor
+@AllArgsConstructor
+@Where(clause = "status = 0")
 public class Kapcsolattarto {
 
     @Id
@@ -36,7 +47,6 @@ public class Kapcsolattarto {
     @Column(name = "comment")
     private String comment;
 
-    @NotNull
     @Column(name = "creation_time")
     private LocalDateTime creationTime;
 
@@ -57,52 +67,6 @@ public class Kapcsolattarto {
         this.comment = comment;
         this.status = status;
         this.creationTime = creationTime;
-    }
-
-    public Kapcsolattarto(){}
-
-
-    public String getFirstName() {
-        return firstName;
-    }
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getPhone() {
-        return phone;
-    }
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-    public Company getCompany() {
-        return company;
-    }
-    public void setCompany(Company company) {
-        this.company = company;
-    }
-    public String getComment() {
-        return comment;
-    }
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-    public StatusEnum getStatus() {
-        return status;
-    }
-    public void setStatus(StatusEnum status) {
-        this.status = status;
     }
 
     @Override

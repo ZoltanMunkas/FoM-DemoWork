@@ -5,12 +5,14 @@ import hu.futureofmedia.task.contactsapi.entities.Kapcsolattarto;
 import hu.futureofmedia.task.contactsapi.enums.StatusEnum;
 import hu.futureofmedia.task.contactsapi.repositories.CompanyRepository;
 import hu.futureofmedia.task.contactsapi.repositories.KapcsolattartoRepository;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Builder
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class KapcsolattartoController {
@@ -36,12 +38,14 @@ public class KapcsolattartoController {
 
     @PutMapping("/kapcsolattartok")
     public Kapcsolattarto saveKapcsolattartok(@RequestBody Kapcsolattarto kapcsolattarto){
+        kapcsolattarto.setModifiedTime(LocalDateTime.now());
         kapcsolattartoRepository.save(kapcsolattarto);
         return kapcsolattarto;
     }
 
     @PostMapping("/kapcsolattartok")
     public Kapcsolattarto addKapcsolattarto(@RequestBody Kapcsolattarto kapcsolattarto) {
+        kapcsolattarto.setCreationTime(LocalDateTime.now());
         kapcsolattartoRepository.save(kapcsolattarto);
         return kapcsolattarto;
     }
