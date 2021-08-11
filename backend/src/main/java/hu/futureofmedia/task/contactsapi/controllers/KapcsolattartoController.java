@@ -5,12 +5,14 @@ import hu.futureofmedia.task.contactsapi.entities.Kapcsolattarto;
 import hu.futureofmedia.task.contactsapi.enums.StatusEnum;
 import hu.futureofmedia.task.contactsapi.repositories.CompanyRepository;
 import hu.futureofmedia.task.contactsapi.repositories.KapcsolattartoRepository;
+import lombok.Builder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Builder
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class KapcsolattartoController {
@@ -50,7 +52,7 @@ public class KapcsolattartoController {
     public void deleteKapcsolattarto(@PathVariable long id){
         if(kapcsolattartoRepository.findById(id).isPresent()){
             Kapcsolattarto deleted = kapcsolattartoRepository.findById(id).get();
-            deleted.setStatus(StatusEnum.ARCHIVED);
+            //deleted.setStatus(StatusEnum.ARCHIVED);
             kapcsolattartoRepository.save(deleted);
         }
     }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="51e91e4a-7a8f-43b2-a0d0-0de2ec277ea6" name="contactsapi" url="jdbc:postgresql://localhost:15432/contactsapi" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>
